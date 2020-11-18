@@ -1,0 +1,14 @@
+function framework(points)
+
+start = points{1, 1}{1, 1};
+goal = points{1, 2}{1, 1};
+
+% x·½ÏòÂ·¾¶
+n = size(start, 1);
+
+for i = 1:n
+   plot3(start(:,)) 
+end
+
+end
+

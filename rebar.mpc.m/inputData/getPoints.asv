@@ -1,0 +1,16 @@
+function [ axis ] = getPoints(type, start, goal)
+
+AXIS = 3;
+
+axis = {};
+
+file = ['.\\inputData\\%s\\$\\%s'; '.\\inputData\\%s\\yaxis\\%s'; '.\\inputData\\%s\\xaxis\\%s'];
+
+for i = 1:AXIS
+   ps = importfile(sprintf(file(i,:), type, start));
+   pe = importfile(sprintf(file(i,:), type, goal));
+   axis{i} = {ps, pe};
+end
+
+end
+
